@@ -52,14 +52,14 @@ public class ArikInit extends ActionBarActivity {
         Story arik1 = new Story("born", new GregorianCalendar(1939,2,1));
         String arik1Pic1 = "file:/storage/emulated/0/arik/lul2.jpg";
         String arik1Pic1T = makeThumbnailFromPhoto(Uri.parse(arik1Pic1));
-        arik1.addPhoto(this, arik1Pic1, arik1Pic1T);
+        arik1.addPhoto(this, arik1Pic1, arik1Pic1T,"");
         int id1  = db.insertStory(arik1);
 
         // Story of basketBall
         Story arik2 = new Story("Sports", new GregorianCalendar(1955,0,1));
         String arik2Pic1 = "file:/storage/emulated/0/arik/basketball.jpg";
         String arik2Pic1T = makeThumbnailFromPhoto(Uri.parse(arik2Pic1));
-        arik2.addPhoto(this, arik2Pic1, arik2Pic1T);
+        arik2.addPhoto(this, arik2Pic1, arik2Pic1T,"");
         int id2  = db.insertStory(arik2);
         String arik2Pic2 = "file:/storage/emulated/0/arik/basketball1.jpg";
         String arik2Pic2T = makeThumbnailFromPhoto(Uri.parse(arik2Pic2));
@@ -75,7 +75,7 @@ public class ArikInit extends ActionBarActivity {
         Story arik3 = new Story("Yoshev hal hagader", new GregorianCalendar(1982,7,1));
         String arik3Pic1 = "file:/storage/emulated/0/arik/yoshev.jpg";
         String arik3Pic1T = makeThumbnailFromPhoto(Uri.parse(arik3Pic1));
-        arik3.addPhoto(this, arik3Pic1, arik3Pic1T);
+        arik3.addPhoto(this, arik3Pic1, arik3Pic1T,"");
         int id3  = db.insertStory(arik3);
         String arik3Pic2 = "file:/storage/emulated/0/arik/yoshev1.jpg";
         String arik3Pic2T = makeThumbnailFromPhoto(Uri.parse(arik3Pic2));
@@ -91,7 +91,7 @@ public class ArikInit extends ActionBarActivity {
         Story arik4 = new Story("Big Eyes", new GregorianCalendar(1974,0,1));
         String arik4pic1 = "file:/storage/emulated/0/arik/bigeyes.jpg";
         String arik4pic1T = makeThumbnailFromPhoto(Uri.parse(arik4pic1));
-        arik4.addPhoto(this, arik4pic1, arik4pic1T);
+        arik4.addPhoto(this, arik4pic1, arik4pic1T,"");
         int id4  = db.insertStory(arik4);
         String arik4vid = "file:/storage/emulated/0/arik/bigeyesv.mp4";
         String arik4vidT = makeThumbnailFromVideo(Uri.parse(arik4vid));
@@ -101,7 +101,7 @@ public class ArikInit extends ActionBarActivity {
         Story arik5 = new Story("Ani veata", new GregorianCalendar(1971,0,1));
         String arik5pic1 = "file:/storage/emulated/0/arik/meandyou1.jpg";
         String arik5pic1T = makeThumbnailFromPhoto(Uri.parse(arik5pic1));
-        arik5.addPhoto(this, arik5pic1, arik5pic1T);
+        arik5.addPhoto(this, arik5pic1, arik5pic1T,"");
         int id5  = db.insertStory(arik5);
         String arik5pic2 = "file:/storage/emulated/0/arik/meandyou.jpg";
         String arik5pic2T = makeThumbnailFromPhoto(Uri.parse(arik5pic2));
@@ -113,7 +113,7 @@ public class ArikInit extends ActionBarActivity {
         Story arik6 = new Story("lul", new GregorianCalendar(1970,11,4));
         String arik6pic1 = "file:/storage/emulated/0/arik/lul1.jpg";
         String arik6pic1T = makeThumbnailFromPhoto(Uri.parse(arik6pic1));
-        arik6.addPhoto(this, arik6pic1, arik6pic1T);
+        arik6.addPhoto(this, arik6pic1, arik6pic1T,"");
         int id6  = db.insertStory(arik6);
         String arik6pic2 = "file:/storage/emulated/0/arik/lul2.jpg";
         String arik6pic2T = makeThumbnailFromPhoto(Uri.parse(arik6pic2));
@@ -132,7 +132,7 @@ public class ArikInit extends ActionBarActivity {
         Story arik7 = new Story("Nahal Days", new GregorianCalendar(1959,0,1));
         String arik7pic1 = "file:/storage/emulated/0/arik/nachal1959.jpg";
         String arik7pic1T = makeThumbnailFromPhoto(Uri.parse(arik7pic1));
-        arik7.addPhoto(this, arik7pic1, arik7pic1T);
+        arik7.addPhoto(this, arik7pic1, arik7pic1T,"");
         int id7 = db.insertStory(arik7);
         String arik7vid = "file:/storage/emulated/0/arik/nahal2004.mp4";
         String arik7vidT = makeThumbnailFromVideo(Uri.parse(arik7vid));

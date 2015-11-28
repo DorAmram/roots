@@ -85,8 +85,8 @@ public class StoryDetails extends AppCompatActivity {
         ImageButton submit = (ImageButton) this.findViewById(R.id.SubmitButton);
         EditText editTitle = (EditText) findViewById(R.id.EditTitle);
         Bundle Title = getIntent().getExtras();
-        String title = Title.getString("title");
-        if (title != null) {
+        String title = Title.getString("idOrNewOrCampaignQ");
+        if (title != "new") {
 
             editTitle.setText(title);
             //editTitle.setEnabled(false);
@@ -153,20 +153,21 @@ public class StoryDetails extends AppCompatActivity {
         String path = Data.getString("path");
         String tPath =  Data.getString("tPath");
         String type = Data.getString("type");
+        String scndTitle = Data.getString("2ndTitle");
         //Photo
         if (type.equals("Photo")) {
-            newStory.addPhoto(this, path, tPath);
+            newStory.addPhoto(this, path, tPath,scndTitle);
         }
         //Audio
         else if (type.equals("Audio")) {
-            newStory.addAudio(path);
+            newStory.addAudio(path,scndTitle);
         } else if (type.equals("Video")) {
-            newStory.addVideo(path,tPath);
+            newStory.addVideo(path,tPath,scndTitle);
         }
         else // audio recorded!!! not mp3 ext.
         {
             Log.i("eliLog", "audio added with no mp3 ending");
-            newStory.addAudio(path);
+            newStory.addAudio(path,scndTitle);
         }
             DBHandler db = new DBHandler(getApplicationContext());
             db.initUnqId(this);
@@ -183,7 +184,7 @@ public class StoryDetails extends AppCompatActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             Intent i=new Intent(this, MediaChooserActivity.class);
-            i.putExtra("title", idOrNewOrCampaignQ);
+            i.putExtra("idOrNewOrCampaignQ", idOrNewOrCampaignQ);
             startActivity(i);
             return true;
         }

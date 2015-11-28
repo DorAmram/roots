@@ -27,6 +27,11 @@ public class Story implements Comparable<Story>{
     private String location;
     private int id;
     private int uniqueId;
+    //NEW
+    private ArrayList<String> photosTitle;
+    private ArrayList<String> videosTitle;
+    private ArrayList<String> audiosTitle;
+    //
 
     //Globals
     private static String mCurrentPhotoPath;
@@ -40,6 +45,10 @@ public class Story implements Comparable<Story>{
         videos = new ArrayList<String>();
         photosThumb = new ArrayList<String>();
         videosThumb = new ArrayList<String>();
+        //NEW
+        photosTitle = new ArrayList<String>();
+        videosTitle = new ArrayList<String>();
+        audiosTitle = new ArrayList<String>();
     }
 
     public String getDefaultTimeLinePhoto(){
@@ -90,77 +99,41 @@ public class Story implements Comparable<Story>{
         this.name = name;
     }
 
-    public void addVideo(String videoPath, String tPath){
+    public void addVideo(String videoPath, String tPath, String title){
         this.videos.add(videoPath);
         this.videosThumb.add(tPath);
-/*        Uri uri = Uri.parse(videoPath);
-        Bitmap bitmap = ThumbnailUtils.createVideoThumbnail(uri.getPath(),
-                MediaStore.Images.Thumbnails.MINI_KIND);
-        Bitmap output = Bitmap.createScaledBitmap(bitmap, 200, 200, false);
-        FileOutputStream out = null;
-        File imageFile = createImageFile();
-        try {
-            out = new FileOutputStream(mCurrentPhotoPath);
-            // choose JPEG format
-            output.compress(Bitmap.CompressFormat.JPEG, 100, out);
-            if (out != null) {
-                out.flush();
-                out.close();
-                videosThumb.add(mCurrentPhotoPath);
-            }
-        } catch (Exception e) {
-            // Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-            // manage exception
-        }*/
+        this.videosTitle.add(title);
     }
 
-    public void addPhoto(Context context,String photoPath, String tPath){
+    public void addPhoto(Context context,String photoPath, String tPath, String title){
         this.photos.add(photoPath);
         photosThumb.add(tPath);
- /*       Uri uri = Uri.parse(photoPath);
-        try
-        {
-            Bitmap bitmap = MediaStore.Images.Media.getBitmap(context.getContentResolver(), uri);
-            Bitmap output = Bitmap.createScaledBitmap(bitmap, 200, 200, false);
-            FileOutputStream out = null;
-            File imageFile = createImageFile();
-            out = new FileOutputStream(mCurrentPhotoPath);
-            // choose JPEG format
-            output.compress(Bitmap.CompressFormat.JPEG, 100, out);
-            if (out != null) {
-                out.flush();
-                out.close();
-                photosThumb.add(mCurrentPhotoPath);
-            }
-        } catch (Exception e) {
-            // Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-            // manage exception
-        }*/
+        photosTitle.add(title);
     }
 
-    private File createImageFile() {
-        // Create an image file name by time and date.
-        long epoch = System.currentTimeMillis();
-        String timeStamp = new SimpleDateFormat("MM.dd.yyyy_HH:mm:ss").
-                format(new java.util.Date(epoch));
-        //To get acsses to external  storage
-        File storageDir = Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES);
-        try {
-            //Creates a new image.
-            File image = File.createTempFile(
-                    timeStamp,  /* prefix */
-                    ".jpg",         /* suffix */
-                    storageDir      /* directory */
-            );
-            // Save a file: path for use with ACTION_VIEW intents
-            mCurrentPhotoPath =  image.getAbsolutePath();
-            return image;
-        }catch(IOException e){
-            //TODO informative Toast
-        }
-        return null;
-    }
+//    private File createImageFile() {
+//        // Create an image file name by time and date.
+//        long epoch = System.currentTimeMillis();
+//        String timeStamp = new SimpleDateFormat("MM.dd.yyyy_HH:mm:ss").
+//                format(new java.util.Date(epoch));
+//        //To get acsses to external  storage
+//        File storageDir = Environment.getExternalStoragePublicDirectory(
+//                Environment.DIRECTORY_PICTURES);
+//        try {
+//            //Creates a new image.
+//            File image = File.createTempFile(
+//                    timeStamp,  /* prefix */
+//                    ".jpg",         /* suffix */
+//                    storageDir      /* directory */
+//            );
+//            // Save a file: path for use with ACTION_VIEW intents
+//            mCurrentPhotoPath =  image.getAbsolutePath();
+//            return image;
+//        }catch(IOException e){
+//            //TODO informative Toast
+//        }
+//        return null;
+//    }
 
     public String getVideoThumbAt(int location){
         return this.videosThumb.get(location);
@@ -170,8 +143,9 @@ public class Story implements Comparable<Story>{
         return this.photosThumb.get(location);
     }
 
-    public void addAudio(String audioPath){
+    public void addAudio(String audioPath, String title){
         this.audios.add(audioPath);
+        audiosTitle.add(title);
     }
 
     public GregorianCalendar getDate(){
@@ -220,8 +194,6 @@ public class Story implements Comparable<Story>{
 
     public ArrayList<String> dbGetVideosThumb(){return videosThumb;}
 
-    public void audioPlayer(String path, String fileName){
-    }
 
     public String getLocation()
     {
