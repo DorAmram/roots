@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context=".MainActivity"
+    android:background="#ba3e1c"
+    android:columnCount="1"
+    android:rowCount="5"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:shrinkColumns="0"
+        android:layout_gravity="bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="230dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/imageButton"
+                android:src="@drawable/v3tlgraphicutton"
+                android:onClick="MoveToTimiline"
+                android:scaleType="fitEnd"
+                android:background="#e1eef5"
+                android:layout_column="0"
+                android:layout_columnSpan="2"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/AudioButton"
+            android:src="@drawable/v3smallaudiobutton"
+            android:onClick="MoveToAudio"
+            android:scaleType="fitCenter"
+            android:background="#ffe45e"
+            android:layout_column="0"
+            android:layout_columnSpan="2"/>
+
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/imageButton4"
+            android:src="@drawable/v3videobutton"
+            android:onClick="MoveToVideo"
+            android:scaleType="fitCenter"
+            android:background="#f0c048"
+            android:layout_column="0"
+            android:layout_columnSpan="2"/>
+
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/CameraButton"
+            android:src="@drawable/v3camerabutton"
+            android:onClick="MoveToCamera"
+            android:scaleType="fitCenter"
+            android:background="#e88649"
+            android:layout_column="0"
+            android:layout_columnSpan="2"/>
+
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="bottom|center_horizontal"
+            android:id="@+id/imageButton5"
+            android:src="@drawable/v3gallerybutton"
+            android:onClick="onPickPhoto"
+            android:scaleType="fitCenter"
+            android:background="#ba3e1c"
+            android:layout_column="0"
+            android:layout_columnSpan="2"/>
+    </TableLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/View2"
+        android:layout_column="0"
+        android:minHeight="100dp"
+        android:background="#FFF"
+        android:visibility="invisible"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginLeft="150dp" />
+
+    <!--<android.inputmethodservice.ExtractEditText-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="New ExtractEditText"-->
+        <!--android:id="@+id/extractEditText"-->
+        <!--android:layout_column="0"-->
+        <!--android:visibility="invisible"-->
+        <!--android:layout_marginLeft="100dp"-->
+        <!--android:layout_marginTop="120dp"-->
+        <!--android:layout_marginRight="100dp" />-->
+
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array
+        name="campaignQuestions">
+        <item>תאר את הריח והאוירה ששררו בבית הוריך</item>
+        <item>ספר על היום הכי פרוע בשנות ה20 שלך</item>
+        <item>איזה תלמיד היית?</item>
+        <item> ספר לי על האהבה הראשונה שלך</item>
+        <item>מה הזכרון הראשון שלך?</item>
+
+    </string-array>
+
+</resources>

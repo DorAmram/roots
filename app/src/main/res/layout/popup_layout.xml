@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="wrap_content"
+android:id="@+id/popup"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/add_image"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:onClick="MoveToCampaign"
+        android:background="@drawable/campaignbutton" />
+
+    <Button
+        android:id="@+id/add_audio"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:onClick="createNewContent"
+        android:background="@drawable/createbutton" />
+
+    <Button
+    android:id="@+id/close"
+    android:layout_marginTop="15dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:background="@drawable/v3plusbutton" />
+
+</LinearLayout>

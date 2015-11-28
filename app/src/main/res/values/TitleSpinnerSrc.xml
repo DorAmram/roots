@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string-array
+name="title_selection">
+    <item></item>
+    <item>Birth</item>
+    <item>Bar-Mitzvah</item>
+    <item>Wedding</item>
+    <item>First child</item>
+    <item>Alya</item>
+</string-array>
+</resources>

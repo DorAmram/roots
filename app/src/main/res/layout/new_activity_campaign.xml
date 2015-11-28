@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e1eef5"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:background="#fff">
+
+        <RatingBar
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginBottom="20dp"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/qDisp"
+        android:layout_gravity="center"
+        android:layout_height="300dp"
+        android:textColor="#ba3e1c"
+        android:textSize="40dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <LinearLayout
+        android:layout_marginBottom = "10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#fff">
+
+
+        <ImageButton
+            android:layout_marginRight = "50dp"
+            android:layout_marginLeft = "30dp"
+
+            android:layout_width="wrap_content"
+            android:id="@+id/switch_question"
+            android:src="@drawable/changebutton"
+            android:layout_centerInParent="true"
+            android:scaleType="fitEnd"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#fff"
+            android:layout_weight="1"
+            android:onClick="changeQuestion"
+            />
+
+        <ImageButton
+            android:layout_marginRight = "30dp"
+            android:layout_marginLeft = "50dp"
+            android:paddingTop="0dp"
+
+            android:layout_width="wrap_content"
+            android:id="@+id/start_story"
+            android:src="@drawable/startstory"
+            android:layout_centerInParent="true"
+            android:scaleType="fitStart"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:layout_weight="1"
+            android:layout_gravity="top|center"
+            android:onClick="takeQuestion"/>
+    </LinearLayout>
+
+</LinearLayout>
